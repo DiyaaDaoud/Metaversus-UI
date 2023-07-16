@@ -13,6 +13,8 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "eslintreact/quotes": "off",
+    "react/function-component-definition": "off",
     "react/no-unescaped-entities": 0,
     "eslintreact/no-danger": 0,
     "react/jsx-max-props-per-line": 0,
@@ -31,13 +33,6 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "react/function-component-definition": [
-      2,
-      {
-        namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function",
-      },
-    ],
     "max-len": [2, 1050],
     "no-multiple-empty-lines": [
       "error",
