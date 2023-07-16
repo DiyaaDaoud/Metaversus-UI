@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn, planetVariants, staggerContainer } from "../utils/motion";
 import { ExploreCard, StartSteps, TitleText, TypingText } from "../components";
 import { exploreWorlds, startingFeatures } from "../constants";
+import Image from "next/image";
 const GetStarted = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
@@ -17,11 +18,7 @@ const GetStarted = () => (
         variants={planetVariants("left")}
         className={`flex-1 ${styles.flexCenter} mt-[40px]`}
       >
-        <img
-          src="./get-started.png"
-          alt=""
-          className="w-[95%] h-[95%] object-contain"
-        ></img>
+        <Image src="/get-started.png" alt="" fill className="object-contain" />
       </motion.div>
       <motion.div
         variants={fadeIn("left", "tween", 0.2, 1)}

@@ -7,11 +7,13 @@ import { footerVariants } from "../utils/motion";
 import { socials } from "../constants";
 
 import styles from "../styles";
+import Image from "next/image";
 const Footer = () => (
   <motion.footer
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
+    viewport={{ once: true, amount: 0.25 }}
     className={`${styles.paddings} py-8 relative`}
   >
     <div className="footer-gradient" />
@@ -24,12 +26,8 @@ const Footer = () => (
           className="flex items-center justify-center h-fit bg-[rgba(37,97,139,1)] rounded-[32px] gap-[12px] px-6 py-4"
           type="button"
         >
-          <div className="w-[24px] h-[24px] flex items-center justify-center">
-            <img
-              src="./headset.svg"
-              alt=""
-              className="w-full h-full object-contain"
-            />
+          <div className="relative w-[24px] h-[24px] flex items-center justify-center">
+            <Image src="/headset.svg" alt="" fill className="object-contain" />
           </div>
           <p className="font-normal text-white text-[16px]">ENTER METAVERSE</p>
         </button>
@@ -43,11 +41,13 @@ const Footer = () => (
           </p>
           <div className="flex flex-row gap-4">
             {socials.map((social, index) => (
-              <img
+              <Image
                 key={index}
                 src={social.url}
                 alt={social.name}
-                className="w-[24px] h-[24px] object-contain cursor-pointer"
+                width={24}
+                height={24}
+                className=" object-contain cursor-pointer"
               />
             ))}
           </div>

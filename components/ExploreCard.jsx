@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles";
 
 import { fadeIn } from "../utils/motion";
+import Image from "next/image";
 const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => (
   <motion.div
     variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
@@ -13,10 +14,11 @@ const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => (
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => handleClick(id)}
   >
-    <img
+    <Image
       src={imgUrl}
       alt={title}
-      className="absolute w-full h-full object-cover rounded-[24px]"
+      fill
+      className="absolute object-cover rounded-[24px]"
     />
     {active !== id ? (
       <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
@@ -28,10 +30,12 @@ const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => (
           <div
             className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism xl:mb-[16px]`}
           >
-            <img
-              src="./headset.svg"
+            <Image
+              src="/headset.svg"
               alt="headset"
-              className="w-1/2 h-1/2 object-contain"
+              width={30}
+              height={30}
+              className="object-contain"
             />
           </div>
           <p className="font-normal text-[16px] leading-[20px] uppercase text-white">

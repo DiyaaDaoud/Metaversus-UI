@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn, planetVariants, staggerContainer } from "../utils/motion";
 import { CardWorld, CircleImage, TitleText, TypingText } from "../components";
 import { exploreWorlds } from "../constants";
+import Image from "next/image";
 const World = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
@@ -28,9 +29,9 @@ const World = () => (
       />
       <motion.div
         variants={fadeIn("up", "tween", 0.3, 1)}
-        className="xl:block hidden relative lg:mt-[80px] md:mt-[70px] sm:mt-[20px] mt-[20px] w-full h-[550px] flex-1"
+        className="xl:block hidden relative lg:mt-[80px] md:mt-[70px] sm:mt-[20px] mt-[20px] w-full h-[550px]"
       >
-        <img src="./map.png" className="w-full h-full object-contain" />
+        <Image src="/map.png" alt="map" fill />
         <CircleImage
           outerImage="/union2.png"
           innerImage="/people-01.png"
@@ -54,7 +55,7 @@ const World = () => (
         ></div>
         <CardWorld
           title={exploreWorlds[1].title}
-          imgUrl="./planetcard02.png"
+          imgUrl="/planetcard02.png"
           containerStyles="top-[40%] left-[20%]"
           outerWidth={217}
           outerHeight={167}
@@ -64,7 +65,7 @@ const World = () => (
         ></div>
         <CardWorld
           title={exploreWorlds[4].title}
-          imgUrl="./planetcard01.png"
+          imgUrl="/planetcard01.png"
           containerStyles="top-[10%] right-[20%]"
           outerWidth={211}
           outerHeight={159}
