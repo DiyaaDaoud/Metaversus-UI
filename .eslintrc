@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "quotes": "off",
+    "react/function-component-definition": "off"
+  }
+}
