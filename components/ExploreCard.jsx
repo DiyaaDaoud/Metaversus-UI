@@ -1,6 +1,9 @@
 "use client";
+
 import { motion } from "framer-motion";
+
 import styles from "../styles";
+
 import { fadeIn } from "../utils/motion";
 const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => (
   <motion.div
@@ -29,7 +32,7 @@ const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => (
               src="./headset.svg"
               alt="headset"
               className="w-1/2 h-1/2 object-contain"
-            ></img>
+            />
           </div>
           <p className="font-normal text-[16px] leading-[20px] uppercase text-white">
             Enter the Metaverse

@@ -1,13 +1,11 @@
 "use client";
+
 import { motion } from "framer-motion";
-import {
-  fadeIn,
-  footerVariants,
-  staggerContainer,
-  zoomIn,
-} from "../utils/motion";
-import { InsightCard, TitleText, TypingText } from "../components";
-import { insights, socials } from "../constants";
+
+import { footerVariants } from "../utils/motion";
+
+import { socials } from "../constants";
+
 import styles from "../styles";
 const Footer = () => (
   <motion.footer
@@ -16,7 +14,7 @@ const Footer = () => (
     whileInView="show"
     className={`${styles.paddings} py-8 relative`}
   >
-    <div className="footer-gradient"></div>
+    <div className="footer-gradient" />
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-5">
         <h4 className="font-bold md:text-p[64px] text-[44px] text-white">
@@ -37,7 +35,7 @@ const Footer = () => (
         </button>
       </div>
       <div className="flex flex-col">
-        <div className="mb-[50px] h-[2px] bg-white opacity-10"></div>
+        <div className="mb-[50px] h-[2px] bg-white opacity-10" />
         <div className="flex justify-between gap-4 items-center ">
           <h4 className=" text-white font-extrabold text-[24px]">METVERSUS</h4>
           <p className="lg:block hidden font-normal text-[14px] text-white opacity-50">

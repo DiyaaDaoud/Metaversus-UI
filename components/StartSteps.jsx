@@ -1,6 +1,5 @@
 import styles from "../styles";
-import { motion } from "framer-motion";
-import { fadeIn, planetVariants, staggerContainer } from "../utils/motion";
+
 const StartSteps = ({ number, text }) => (
   <div className={`${styles.flexCenter} flex-row`}>
     <div
