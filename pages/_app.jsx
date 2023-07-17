@@ -15,7 +15,11 @@ const MyApp = ({ Component, pageProps }) => (
         itemProp="image"
         content="https://metaversus-ui-three.vercel.app/favicon.ico"
       />
-      {/** google */}
+      <meta
+        name="google-site-verification"
+        content="gcYUOalANJXmcgozRx5sBirKZ28Nazsh-4okX0-CH88"
+      />
+      {/** twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Metaversus" />
       <meta itemProp="twitter:description" content="Metaversus UI website" />
