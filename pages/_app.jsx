@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="twitter:title" content="Metaversus" />
       <meta name="twitter:description" content="Metaversus UI website" />
       <meta
-        itemProp="twitter:image"
+        name="twitter:image"
         content="https://metaversus-ui-three.vercel.app/favicon.ico"
       />
     </Head>
